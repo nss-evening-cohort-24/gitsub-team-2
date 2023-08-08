@@ -1,1 +1,52 @@
-# GITSUB 
+#### README is completed with:
+- Name of the Project
+  -Client Side Group Project
+- Overview of the project
+  -This is a webpage that mimics the style and options of Github but with less functionality as the real Github. This webpage will allow users to access some of the many features that Github allows users to use.
+- Link to your wireframes/prototype
+  -SKIPPED FOR NOW
+- Link to the deployed project
+  -
+- Link to your project board (yes...even though it is a part of the repo)
+  -https://github.com/orgs/nss-evening-cohort-24/projects/5
+- Description of the user
+  -The person that would visit this page would be an enthusiastic and drivin software developer who is wanting to showcase their amazing code that they have created. And/or someone who would want to colaborate with a team of software developers. They may possess a diverse set of skills, ranginging from coding and programming to project management and problem-solving.
+-List of features
+  -Required [ON ALL PAGES]:
+    -Profile Area
+    -Nav Bar
+    -Footer
+  -Overview Page:
+    -Div with pinned repositories
+    -Button with Modal function
+    -Pin up to 6 repos max in this section
+  -Overview Create:
+    -Use bootstrap for input form
+    -"Create Project / Submit" button that pushes form input data into an empty array, and displays it on the dom in the pinned section
+  -Repos Page:
+    -Create an object array with placeholder values
+    -Loops through the object array to display title, about, filter tag, language, star icon, last updated, star (pin button), and graph
+  -Repos Create:
+    -Copy over from overview page
+    -Same assetss
+  -Project Page:
+    -Use bootstrap for list groups
+    -"Example/Test" projects to be displayed
+  -Projects: Create a new Project:
+    -Copy over from overview page but change from create repo to create project
+  -Packages Page:
+    -Use bootstrap for card structure 
+    -Packages object array with a few already added for example demo
+    -INclude an icon, title, about and learn more button
+  -Packages: Create a new project:
+    -Copy over from project page
+    -Same Assets
+- Screenshots of your project
+  -SKIPPED FOR NOW
+- List of contributors and links to their GH profiles
+  -https://github.com/b33blebroxx
+  -https://github.com/Lucas-Martin2023 
+  -https://github.com/alexsendre 
+  -https://github.com/ctucker0113 
+- Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great)
+  -SKIPPED FOR NOW
