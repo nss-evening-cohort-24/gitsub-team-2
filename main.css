@@ -1,3 +1,9 @@
 body {
-  background-color: lightcoral;
+  background-color: lightblue;
+}
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  border: 3px dotted red;
 }
