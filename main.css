@@ -1,6 +1,7 @@
 body {
-  background-color: lightcoral;
+  background-color: lightblue;
 }
+
 #footer {
   position: fixed;
   bottom: 0px;
@@ -21,4 +22,8 @@ span {
   backdrop-filter: blur( 0px );
   -webkit-backdrop-filter: blur( 0px );
   border-radius: 10px;
+}
+
+#divContainer{
+  margin-left: 250px;
 }
