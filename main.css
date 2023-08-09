@@ -28,8 +28,15 @@ body {
 
 .profile-btn {
   color: whitesmoke;
-  gap: 3px;
+  gap: 6px;
   margin-bottom: 15px;
+}
+
+.profile-info > ul > li {
+  list-style: none;
+  text-align: center;
+  color: whitesmoke;
+
 }
 
 .profile-btn-follow,
@@ -70,8 +77,8 @@ span {
 #tiny-git {
   max-width: 8%;
   background: rgba( 252, 249, 249, 0 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 0px );
-  -webkit-backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px ); */
   border-radius: 10px;
 }
