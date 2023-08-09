@@ -1,4 +1,5 @@
 // UTILITY FUNCTION
+
 const renderToDom = (divId, htmlRender) => {
   const selectedDiv = document.querySelector(divId);
   selectedDiv.innerHTML = htmlRender;
@@ -6,6 +7,9 @@ const renderToDom = (divId, htmlRender) => {
 
 //Variables
 const footer = document.querySelector("#footer");
+const navbarElement = document.querySelector("#navbar")
+//const overviewBtnelement = document.querySelector("overviewBtn")
+
 
 //Functions
 function renderFooter() {
@@ -30,4 +34,21 @@ function renderFooter() {
   renderToDom("#footer", domString);
 }
 
+function eventListeners(){
+  navbarElement.addEventListener("click", (e) =>{
+    if(e.target.id === "overviewBtn"){
+      console.log("Overview Button Clicked!")
+    } else if(e.target.id === "repositoriesBtn"){
+      console.log("Repositories Button Clicked!")
+    }
+    else if(e.target.id === "projectsBtn"){
+      console.log("Projects Button Clicked!")
+    }
+    else if(e.target.id === "packagesBtn"){
+      console.log("Packages Button Clicked!")
+    }
+  })
+}
 renderFooter();
+
+eventListeners()
