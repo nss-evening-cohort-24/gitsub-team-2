@@ -17,7 +17,7 @@ function renderFooter() {
     <span><a href="https://github.com/about">  About  </a></span>
     <span><a href="https://services.github.com/">  Training  </a></span>
     <span><a href="https://docs.github.com/">  API  </a></span>
-    <span><img id="tiny-git" src='https://banner2.cleanpng.com/20180824/jtl/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b0bac53.1999041115351082030478.jpg'></span>
+    <span><img id="tiny-git" src='./assets/images/github-logo.png'></span>
     <span><a href="https://github.com/pricing">  Pricing  </a></span>
     <span>
       <a href="https://support.github.com/?tags=dotcom-footer">
