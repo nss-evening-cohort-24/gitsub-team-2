@@ -1,14 +1,12 @@
 body {
   background-color: lightblue;
 }
-<<<<<<< HEAD
 
 #navbar{
   display: flex;
   justify-content: space-between;
-  border: 3px dotted red;
 }
-=======
+
 #footer {
   position: fixed;
   bottom: 0px;
@@ -30,4 +28,4 @@ span {
   -webkit-backdrop-filter: blur( 0px );
   border-radius: 10px;
 }
->>>>>>> main
+
