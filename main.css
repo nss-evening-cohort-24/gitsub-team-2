@@ -2,11 +2,6 @@ body {
   background-color: lightblue;
 }
 
-#navbar{
-  display: flex;
-  justify-content: space-between;
-}
-
 #footer {
   position: fixed;
   bottom: 0px;
@@ -28,4 +23,5 @@ span {
   -webkit-backdrop-filter: blur( 0px );
   border-radius: 10px;
 }
+
 
