@@ -12,18 +12,89 @@ body {
 span {
   padding: 2px;
   font-size: 8px;
-  
 }
 
 #tiny-git {
   max-width: 8%;
   background: rgba( 252, 249, 249, 0 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 0px );
-  -webkit-backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px ); */
   border-radius: 10px;
 }
 
 #divContainer{
   margin-left: 250px;
+}
+
+#profile-area {
+  width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+}
+
+.profile-icon {
+  max-width: 100%;
+  margin: 20px 0 15px 0;
+}
+
+.profile-btn {
+  color: whitesmoke;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.profile-info > ul > li {
+  list-style: none;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.profile-btn-follow,
+.profile-btn-sponsor,
+.profile-btn-extras {
+  border-radius: 10px;
+  border: none;
+
+}
+
+.profile-username {
+  font-size: 14px;
+}
+
+.profile-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.followers,
+.following {
+  text-decoration: none;
+  color: rgb(174, 174, 174);
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-line {
+  border: 1px solid #a0a0a0;
+  width: 200px;
+  margin-top: 0;
 }
