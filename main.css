@@ -3,17 +3,58 @@ body {
 }
 
 #profile-area {
+  width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #333;
-  height: 750px;
-  width: 250px;
+  color: whitesmoke;
+  text-align: center;
 }
 
-.profile-img > img {
+.profile-img {
   border-radius: 50%;
   width: 200px;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
 }
+
+.profile-icon {
+  max-width: 100%;
+  margin: 20px 0 15px 0;
+}
+
+.profile-btn {
+  color: whitesmoke;
+  gap: 3px;
+  margin-bottom: 15px;
+}
+
+.profile-btn-follow,
+.profile-btn-sponsor,
+.profile-btn-extras {
+  border-radius: 10px;
+  border: none;
+}
+
+.profile-username {
+  font-size: 14px;
+}
+
+.profile-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.followers,
+.following {
+  text-decoration: none;
+  color: rgb(174, 174, 174);
+}
+
 #footer {
   position: fixed;
   bottom: 0px;
@@ -24,7 +65,6 @@ body {
 span {
   padding: 2px;
   font-size: 8px;
-  
 }
 
 #tiny-git {
