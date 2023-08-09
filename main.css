@@ -1,6 +1,30 @@
 body {
-<<<<<<< HEAD
-  background-color: lightgoldenrodyellow;
+  background-color: lightblue;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  width: auto;
+  text-align: center;
+}
+
+span {
+  padding: 2px;
+  font-size: 8px;
+}
+
+#tiny-git {
+  max-width: 8%;
+  background: rgba( 252, 249, 249, 0 );
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px ); */
+  border-radius: 10px;
+}
+
+#divContainer{
+  margin-left: 250px;
 }
 
 #profile-area {
@@ -37,7 +61,6 @@ body {
   list-style: none;
   text-align: center;
   color: whitesmoke;
-
 }
 
 .profile-btn-follow,
@@ -45,6 +68,7 @@ body {
 .profile-btn-extras {
   border-radius: 10px;
   border: none;
+
 }
 
 .profile-username {
@@ -63,32 +87,14 @@ body {
   color: rgb(174, 174, 174);
 }
 
-=======
-  background-color: lightblue;
+.info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
->>>>>>> main
-#footer {
-  position: fixed;
-  bottom: 0px;
-  width: auto;
-  text-align: center;
-}
-
-span {
-  padding: 2px;
-  font-size: 8px;
-}
-
-#tiny-git {
-  max-width: 8%;
-  background: rgba( 252, 249, 249, 0 );
-  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 0px );
-  -webkit-backdrop-filter: blur( 0px ); */
-  border-radius: 10px;
-}
-
-#divContainer{
-  margin-left: 250px;
+.profile-line {
+  border: 1px solid #a0a0a0;
+  width: 200px;
+  margin-top: 0;
 }
