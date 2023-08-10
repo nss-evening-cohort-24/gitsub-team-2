@@ -23,8 +23,8 @@ span {
   border-radius: 10px;
 }
 
-#divContainer{
-  margin-left: 250px;
+#navbarContainer{
+  margin-left: 350px;
 }
 
 #profile-area {
@@ -97,4 +97,10 @@ span {
   border: 1px solid #a0a0a0;
   width: 200px;
   margin-top: 0;
+}
+
+#pinned{
+  display: flex;
+  background-color: fuchsia;
+  margin-top: 200px;
 }
