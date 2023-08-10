@@ -132,3 +132,22 @@ span {
   background-color: white;
   border-radius: 10px;
 }
+
+.people-pics {
+  display: flex;
+  flex-direction: row;
+  object-fit: cover;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.people {
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.sponsor-btn {
+  border-radius: 25%;
+}
