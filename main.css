@@ -23,8 +23,9 @@ span {
   border-radius: 10px;
 }
 
-#divContainer{
-  margin-left: 300px;
+#navContainer{
+  width: 100%;
+  border: 3px solid black
 }
 
 #profile-area {
@@ -150,4 +151,29 @@ span {
 
 .sponsor-btn {
   border-radius: 25%;
+}
+
+#pageBody{
+  display: flex;
+}
+
+#pinnedHeader{
+  border: 3px solid green;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 25px;
+}
+
+#pinnedBody{
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#column1, #column2{
+  width: 50%;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6{
+  border: 3px dotted purple;
 }
