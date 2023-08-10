@@ -24,10 +24,12 @@ span {
 }
 
 #divContainer{
-  margin-left: 250px;
+  margin-left: 300px;
 }
 
 #profile-area {
+  top: 0;
+  position: relative;
   width: 300px;
   max-width: 300px;
   display: flex;
@@ -97,4 +99,36 @@ span {
   border: 1px solid #a0a0a0;
   width: 200px;
   margin-top: 0;
+}
+
+.highlight-icons {
+  list-style: none;
+  text-align: start;
+  color: whitesmoke;
+  fill: whitesmoke;
+}
+
+.highlights-left,
+.orgs-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pro-btn {
+  border: none;
+  border-radius: 100px;
+}
+
+.orgs-left {
+  margin-left: 15px;
+}
+
+.react-img,
+.node-img,
+.vsc-img {
+  width:17%;
+  height:17%;
+  object-fit:cover;
+  background-color: white;
+  border-radius: 10px;
 }
