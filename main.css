@@ -28,6 +28,8 @@ span {
 }
 
 #profile-area {
+  top: 0;
+  position: relative;
   width: 300px;
   max-width: 300px;
   display: flex;
@@ -103,4 +105,34 @@ span {
   display: flex;
   background-color: fuchsia;
   margin-top: 200px;
+.highlight-icons {
+  list-style: none;
+  text-align: start;
+  color: whitesmoke;
+  fill: whitesmoke;
+}
+
+.highlights-left,
+.orgs-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pro-btn {
+  border: none;
+  border-radius: 100px;
+}
+
+.orgs-left {
+  margin-left: 15px;
+}
+
+.react-img,
+.node-img,
+.vsc-img {
+  width:17%;
+  height:17%;
+  object-fit:cover;
+  background-color: white;
+  border-radius: 10px;
 }
