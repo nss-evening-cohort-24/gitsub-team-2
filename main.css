@@ -204,3 +204,17 @@ span {
   border: none;
   border-radius: 10px;
 }
+#createProjectBox{
+  border: 2px double red;
+  margin-top: 150px;
+  margin-left: 10%;
+  margin-right: 200px;
+  }
+  
+#createProjectDesc{
+  margin-top: 50px;
+}
+
+.col-6{
+  border: 2px solid blue
+}
