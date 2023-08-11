@@ -181,12 +181,28 @@ span {
 #createProjectBox{
   border: 2px double red;
   margin-top: 150px;
-  margin-left: 10%;
-  margin-right: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: auto
   }
+
+#createPackageBox{
+    border: 2px solid black;
+    margin-top: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    }
+    
   
 #createProjectDesc{
   margin-top: 50px;
+}
+
+#createPackageDesc {
+  margin-top: 30px;
 }
 
 .col-6{

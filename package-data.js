@@ -58,4 +58,27 @@ function packagesOnDom(array) {
   renderToDom('#package-container', domString)
 } 
 
+
 packagesOnDom(packages)
+
+function formOnDom() {
+  let domString = ''
+
+  domString += `<div id="createPackageBox">
+  <h3>Create a New Package</h3>
+  <h6 id="createPackageDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class  ="form-label">Package Name</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type="button" class="btn btn-success" id="createPackageBtn">Create Package</button>
+  </div>`
+
+  renderToDom('#form-container', domString)
+}
+
+formOnDom()
