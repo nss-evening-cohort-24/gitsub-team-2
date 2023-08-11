@@ -192,3 +192,23 @@ span {
 .col-6{
   border: 2px solid blue
 }
+
+#package-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.single-card {
+  border: 2px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
