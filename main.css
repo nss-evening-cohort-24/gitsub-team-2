@@ -1,5 +1,6 @@
 body {
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  background-color: #11171e;
 }
 
 #footer {
@@ -103,10 +104,19 @@ span {
 }
 
 .highlight-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   list-style: none;
   text-align: start;
   color: whitesmoke;
-  fill: whitesmoke;
+}
+
+.highlight-div {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  background-color: blue;
 }
 
 .highlights-left,
@@ -179,13 +189,18 @@ span {
 }
 
 .repo {
-  background-color: rgb(42, 42, 42);
+  background-color: #11171e;
+}
+
+.title-color {
+  color: #5297ff;
 }
 
 .label {
   display: inline-block;
-  line-height: 18px;
-  padding: 0 7px;
+  margin-left: 10px;
+  line-height: 24px;
+  padding: 0 3px;
   white-space: nowrap;
 }
 
@@ -200,22 +215,112 @@ span {
 
 .star-btn {
   height: 20%;
-  width: 60%;
+  width: 35%;
   border: none;
   border-radius: 10px;
+  background-color: #2e343c;
+  color: #838d98;
+  font-weight: bold;
+  height: 40px;
 }
 
-#createProjectBox{
-  border: 2px double red;
-  margin-top: 150px;
-  margin-left: 10%;
+#repos-page {
+  border: 2px double black;
+  background-color: #11171e;
+  margin-top: 20px;
   margin-right: 200px;
+  width: 100%;
+}
+
+.repos-input {
+  margin-top: 10px;
+  width: 30%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #11171e;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#createRepoBox{
+  background-color: #11171e;
+  border: 2px double black;
+  margin-top: 10px;
+  /* margin-right: 200px; */
+  width: 60%;
+  color: whitesmoke;
   }
   
 #createProjectDesc{
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .col-6{
-  border: 2px solid blue
+  border: 2px solid blue;
+}
+
+
+.public-btn {
+  border: none;
+  border-radius: 20px;
+  width: auto;
+  background-color: #21262d;
+  color: #919ba6;
+  font-weight: bold;
+}
+
+.color-custom {
+  color: #919ba6;
+  font-weight: bold;
+}
+
+.opt-desc {
+  font-size: 12px;
+  font-weight: normal;
+  color: #838d98;
+}
+
+.span-tag {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.spacing {
+  padding: 10px;
+}
+
+.name-inspo {
+  font-weight: bold;
+  color: greenyellow;
+  font-size: 16px;
+}
+
+.desc-btns {
+  gap: 25px;
+}
+
+.attributes {
+  text-align: center;
+  height: 30px;
+  width: auto;
+  border: none;
+  border-radius: 30px;
+  font-size: 12px;
+  background-color: #0f2649;
+  padding: 0 10px;
+  color: #5297ff;
+  font-weight: bold;
+}
+
+.favoured {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  height: auto;
+}
+
+.required {
+  font-size: 16px;
+  color: red;
 }

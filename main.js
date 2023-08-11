@@ -84,11 +84,13 @@ function renderProfile() {
         <div class="highlights-left">
           <h5>Highlights</h5>
         </div>
-        <ul class="highlight-icons">
-          <li><img src="./assets/svg/asterisk.svg">&nbsp;&nbsp;Arctic Code Vault Contributor</li>
-          <li><img src="./assets/svg/star-fill.svg">&nbsp;&nbsp;Placeholder</li>
-          <li><img src="./assets/svg/star.svg">&nbsp;&nbsp;<button class="pro-btn">PRO</button></li>
-        </ul>
+        <div class="highlight-div">
+          <ul class="highlight-icons">
+            <li><img src="./assets/svg/asterisk.svg">&nbsp;&nbsp;Placeholder</li>
+            <li><img src="./assets/svg/star-fill.svg">&nbsp;&nbsp;Placeholder</li>
+            <li><img src="./assets/svg/star.svg">&nbsp;&nbsp;<button class="pro-btn">PRO</button></li>
+          </ul>
+        </div>
       </div>
       <div class="profile-separator">
         <hr class="profile-line">
