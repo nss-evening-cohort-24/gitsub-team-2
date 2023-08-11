@@ -7,7 +7,7 @@ const renderToDom = (divId, htmlRender) => {
 
 //Variables
 const footer = document.querySelector("#footer");
-const navbarElement = document.querySelector("#navbar")
+const navContainerElement = document.querySelector("#navContainer")
 const profileArea = document.querySelector("#profile-area")
 //const overviewBtnelement = document.querySelector("overviewBtn")
 
@@ -123,7 +123,7 @@ function renderProfile() {
 }
 
 function eventListeners(){
-  navbarElement.addEventListener("click", (e) =>{
+  navContainerElement.addEventListener("click", (e) =>{
     if(e.target.id === "overviewBtn"){
       console.log("Overview Button Clicked!")
     } else if(e.target.id === "repositoriesBtn"){
@@ -135,6 +135,10 @@ function eventListeners(){
     else if(e.target.id === "packagesBtn"){
       console.log("Packages Button Clicked!")
     }
+    else if(e.target.id === "createProjectBtn"){
+      console.log("Create Project Button Clicked!")
+    }
+    
   })
 }
 renderFooter();
