@@ -1,3 +1,5 @@
+// import * as reposData from "./repos-data.js";
+
 // UTILITY FUNCTION
 
 const renderToDom = (divId, htmlRender) => {
@@ -13,6 +15,8 @@ const profileArea = document.querySelector("#profile-area")
 
 
 //Functions
+
+// Function to render the footer on page
 function renderFooter() {
   domString = "";
 
@@ -35,6 +39,7 @@ function renderFooter() {
   renderToDom("#footer", domString);
 }
 
+// Function to render the profile area on page
 function renderProfile() {
   let domString = "";
   domString += `
@@ -122,6 +127,7 @@ function renderProfile() {
   renderToDom("#profile-area", domString);
 }
 
+// Event Listeners
 function eventListeners(){
   navbarElement.addEventListener("click", (e) =>{
     if(e.target.id === "overviewBtn"){
@@ -137,7 +143,8 @@ function eventListeners(){
     }
   })
 }
+
+// Rendering (later to be modularized)
 renderFooter();
 renderProfile();
-
 eventListeners();

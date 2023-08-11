@@ -15,7 +15,7 @@ span {
 }
 
 #tiny-git {
-  max-width: 8%;
+  max-width: 2%;
   background: rgba( 252, 249, 249, 0 );
   /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 0px );
@@ -176,4 +176,31 @@ span {
 
 #box1, #box2, #box3, #box4, #box5, #box6{
   border: 3px dotted purple;
+}
+
+.repo {
+  background-color: rgb(42, 42, 42);
+}
+
+.label {
+  display: inline-block;
+  line-height: 18px;
+  padding: 0 7px;
+  white-space: nowrap;
+}
+
+.wb-break-all {
+  word-break: break-all !important;
+}
+
+.end-full {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.star-btn {
+  height: 20%;
+  width: 60%;
+  border: none;
+  border-radius: 10px;
 }
