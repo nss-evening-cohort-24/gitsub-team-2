@@ -9,12 +9,8 @@ const renderToDom = (divId, htmlRender) => {
 
 //Variables
 const footer = document.querySelector("#footer");
-const navContainerElement = document.querySelector("#navContainer")
-const profileArea = document.querySelector("#profile-area")
-//const overviewBtnelement = document.querySelector("overviewBtn")
-
-
-//Functions
+const navContainerElement = document.querySelector("#navContainer");
+const profileArea = document.querySelector("#profile-area");
 
 // Function to render the footer on page
 function renderFooter() {
@@ -125,29 +121,34 @@ function renderProfile() {
           <button class="sponsor-btn">+41</button>
         </div>
       </div>
-  `
+  `;
   renderToDom("#profile-area", domString);
 }
 
+
 // Event Listeners
-function eventListeners(){
-  navContainerElement.addEventListener("click", (e) =>{
-    if(e.target.id === "overviewBtn"){
-      console.log("Overview Button Clicked!")
-    } else if(e.target.id === "repositoriesBtn"){
-      console.log("Repositories Button Clicked!")
+function eventListeners() {
+  navContainerElement.addEventListener("click", (e) => {
+    if (e.target.id === "overviewBtn") {
+      console.log("Overview Button Clicked!");
+    } else if (e.target.id === "repositoriesBtn") {
+      console.log("Repositories Button Clicked!");
+    } else if (e.target.id === "projectsBtn") {
+      console.log("Projects Button Clicked!");
+    } else if (e.target.id === "packagesBtn") {
+      console.log("Packages Button Clicked!");
+    } else if (e.target.id === "createProjectBtn") {
+      console.log("Create Project Button Clicked!");
     }
-    else if(e.target.id === "projectsBtn"){
-      console.log("Projects Button Clicked!")
-    }
-    else if(e.target.id === "packagesBtn"){
-      console.log("Packages Button Clicked!")
-    }
-    else if(e.target.id === "createProjectBtn"){
-      console.log("Create Project Button Clicked!")
-    }
-    
-  })
+  });
+
+  projectSearchInput.addEventListener("input", (event) => {
+    //this gets the current input value
+    const searchTerm = event.target.value;
+
+    //this calls the searchProjects function to filter and display projects
+    searchProjects(searchTerm);
+  });
 }
 
 // Rendering (later to be modularized)
