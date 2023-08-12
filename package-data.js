@@ -64,11 +64,11 @@ function formOnDom() {
   <h6 id="createPackageDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
   <div class="mb-3">
   <label for="exampleFormControlTextarea1" class  ="form-label">Package Name</label>
-  <textarea class="form-control" id="name" rows="3"></textarea>
+  <input required class="form-control" id="name" rows="3"></input>
   </div>
   <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-  <textarea class="form-control" id="description" rows="3"></textarea>
+  <textarea required class="form-control" id="description" rows="3"></textarea>
   </div>
   <button type="submit" class="btn btn-success" id="createPackageBtn">Create Package</button>
   </div>`
