@@ -14,7 +14,6 @@
   </head>
   <body>
     <div id="pageBody">
-
       <div id="profile-area"></div>
         <div id="navContainer">
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -31,52 +30,45 @@
                     <a class="nav-link" href="./projects.html" id="projectsBtn">Projects</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./packages.html" id="packagesBtn">Packages</a>
+                    <a class="nav-link" href="#" id="packagesBtn">Packages</a>
                   </li>
               </div>
             </div>
           </nav>
-          <div id="pinnedHeader">Pinned</div>
-          <div id="pinnedBody">
-            <div id="column1">
-              <div id="box1">Box 1</div>
-              <div id="box2">Box 2</div>
-              <div id="box3">Box 3</div>
-            </div>
-            <div id="column2">
-            <div id="box4">Box 4</div>
-            <div id="box5">Box 5</div>
-            <div id="box6">Box 6</div>
-            </div>
+          
+          <div id="projectContainer">
+          <div id="projectSearchBar">
+            <input type="text" id="projectSearchInput" placeholder="Search all projects">
           </div>
-        </nav>
-
-        <div id="createProjectBox">
-          <h3>Create a New Project</h3>
-          <h6 id="createProjectDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
-          <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class  ="form-label">Project Board Name</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <button type="button" class="btn btn-success" id="createProjectBtn">Create Project</button>
+          <div id="projectHeader">Projects</div>
+          <div class="projects" id="proj"></div>
         </div>
 
-        <footer id="footer"></footer>
-        
-      </div>
+          <div id="createProjectBox">
+            <h3>Create a New Project</h3>
+            <h6 id="createProjectDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
+            <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class  ="form-label">Project Board Name</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-success" id="createProjectBtn">Create Project</button>
+            </div>
+        </div>
     </div>
 
+
+
+    <footer id="footer"></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    
-    <script src="repos.data.js"></script>
     <script src="main.js"></script>
+    <script src="projects.js"></script>
   </body>
 </html>
