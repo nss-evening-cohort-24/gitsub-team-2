@@ -59,7 +59,6 @@ function packagesOnDom(array) {
 } 
 
 
-packagesOnDom(packages)
 
 function formOnDom() {
   let domString = ''
@@ -81,8 +80,9 @@ function formOnDom() {
   renderToDom('#form-container', domString)
 }
 
-formOnDom()
 
+
+function packageEventListeners() {
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
@@ -96,5 +96,12 @@ form.addEventListener('submit', (e) => {
   packagesOnDom(packages)
   form.reset()
 })
+}
 
-               
+function packageStart() {
+  packagesOnDom(packages)
+  formOnDom()
+  packageEventListeners()
+}
+              
+packageStart()
