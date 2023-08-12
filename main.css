@@ -177,3 +177,57 @@ span {
 #box1, #box2, #box3, #box4, #box5, #box6{
   border: 3px dotted purple;
 }
+
+#createProjectBox{
+  border: 2px double red;
+  margin-top: 150px;
+  margin-left: 10%;
+  margin-right: 200px;
+  }
+  
+#createProjectDesc{
+  margin-top: 50px;
+}
+
+.col-6{
+  border: 2px solid blue
+}
+
+#projectHeader{
+  background-color: darkgray;
+  padding-left: 2%;
+  padding-right: 10%;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.list-group-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: lightgray;
+  color: white;
+}
+
+#projectSearchBar{
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#projectContainer{
+  border: 2px double black;
+  margin-top: 25px;
+  margin-left: 10%;
+  margin-right: 200px;
+  padding: 0;
+  }
+
+.title-column{
+  width: 200px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.description-column{
+  flex-grow: 1;
+}

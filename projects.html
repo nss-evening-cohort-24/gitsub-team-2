@@ -27,7 +27,7 @@
                     <a class="nav-link active" href="#" id="repositoriesBtn">Repositories</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" id="projectsBtn">Projects</a>
+                    <a class="nav-link" href="./projects.html" id="projectsBtn">Projects</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#" id="packagesBtn">Packages</a>
@@ -36,17 +36,30 @@
             </div>
           </nav>
           
-          <div class="projects">
-            <ul id="list-group">
-              <li class="list-group-item">3 Open</li>
-              <li class="list-group-item">Example 1</li>
-              <li class="list-group-item">my-goals</li>
-              <li class="list-group-item">Sample My Goals</li>
-            </ul>
+          <div id="projectContainer">
+          <div id="projectSearchBar">
+            <input type="text" id="projectSearchInput" placeholder="Search all projects">
           </div>
-          
+          <div id="projectHeader">Projects</div>
+          <div class="projects" id="proj"></div>
+        </div>
+
+          <div id="createProjectBox">
+            <h3>Create a New Project</h3>
+            <h6 id="createProjectDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
+            <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class  ="form-label">Project Board Name</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-success" id="createProjectBtn">Create Project</button>
+            </div>
         </div>
     </div>
+
 
 
     <footer id="footer"></footer>
@@ -56,5 +69,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="main.js"></script>
+    <script src="projects.js"></script>
   </body>
 </html>
