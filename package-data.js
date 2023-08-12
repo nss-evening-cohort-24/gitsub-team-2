@@ -49,7 +49,7 @@ function packagesOnDom(array) {
     <div class="card-body">
       <h5 class="card-title">${package.name}</h5>
       <p class="card-text">${package.description}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-primary">Learn More</a>
     </div>
    </div> 
   </div>`
