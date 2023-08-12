@@ -1,4 +1,4 @@
-
+const form = document.querySelector('form')
 const packages = [
   {
     id: 1,
@@ -37,11 +37,7 @@ const packages = [
   }
 ]
 
-  // const renderToDom = (divId, htmlRender) => {
-  //   const selectedDiv = document.querySelector(divId);
-  //   selectedDiv.innerHTML = htmlRender;
-  // };
-
+//
 function packagesOnDom(array) {
   let domString = ''
   for (const package of array) {
@@ -59,8 +55,7 @@ function packagesOnDom(array) {
 } 
 
 
-packagesOnDom(packages)
-
+//Renders form to Dom
 function formOnDom() {
   let domString = ''
 
@@ -69,16 +64,40 @@ function formOnDom() {
   <h6 id="createPackageDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
   <div class="mb-3">
   <label for="exampleFormControlTextarea1" class  ="form-label">Package Name</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <input required class="form-control" id="name" rows="3"></input>
   </div>
   <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea required class="form-control" id="description" rows="3"></textarea>
   </div>
-  <button type="button" class="btn btn-success" id="createPackageBtn">Create Package</button>
+  <button type="submit" class="btn btn-success" id="createPackageBtn">Create Package</button>
   </div>`
 
   renderToDom('#form-container', domString)
 }
 
-formOnDom()
+
+
+function packageEventListeners() {
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const newPackageObj = {
+    id: packages.length + 1,
+    name: document.querySelector('#name').value,
+    description: document.querySelector('#description').value
+  }
+
+  packages.push(newPackageObj)
+  packagesOnDom(packages)
+  form.reset()
+})
+}
+
+function packageStart() {
+  packagesOnDom(packages)
+  formOnDom()
+  packageEventListeners()
+}
+              
+packageStart()
