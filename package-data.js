@@ -37,11 +37,7 @@ const packages = [
   }
 ]
 
-  // const renderToDom = (divId, htmlRender) => {
-  //   const selectedDiv = document.querySelector(divId);
-  //   selectedDiv.innerHTML = htmlRender;
-  // };
-
+//
 function packagesOnDom(array) {
   let domString = ''
   for (const package of array) {
@@ -59,7 +55,7 @@ function packagesOnDom(array) {
 } 
 
 
-
+//Renders form to Dom
 function formOnDom() {
   let domString = ''
 
