@@ -351,12 +351,6 @@ span {
   color: red;
 }
 
-.repo-language-color {
-  width: 30px;
-  border-radius: 50%;
-  background-color: #f1e05a;
-}
-
 #package-container {
   display: flex;
   flex-wrap: wrap;
