@@ -30,24 +30,20 @@
                     <a class="nav-link" href="./projects.html" id="projectsBtn">Projects</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./packages.html" id="packagesBtn">Packages</a>
+                    <a class="nav-link" href="#" id="packagesBtn">Packages</a>
                   </li>
               </div>
             </div>
           </nav>
-          <div id="pinnedHeader">Pinned</div>
-          <div id="pinnedBody">
-            <div id="column1">
-              <div id="box1">Box 1</div>
-              <div id="box2">Box 2</div>
-              <div id="box3">Box 3</div>
-            </div>
-            <div id="column2">
-            <div id="box4">Box 4</div>
-            <div id="box5">Box 5</div>
-            <div id="box6">Box 6</div>
-            </div>
+          
+          <div id="projectContainer">
+          <div id="projectSearchBar">
+            <input type="text" id="projectSearchInput" placeholder="Search all projects">
           </div>
+          <div id="projectHeader">Projects</div>
+          <div class="projects" id="proj"></div>
+        </div>
+
           <div id="createProjectBox">
             <h3>Create a New Project</h3>
             <h6 id="createProjectDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
@@ -73,5 +69,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="main.js"></script>
+    <script src="projects.js"></script>
   </body>
 </html>
