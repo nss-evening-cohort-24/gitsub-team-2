@@ -3,9 +3,9 @@ const reposData = [
     id: 1,
     repoTitle: "testing",
     about: "This is my test branch",
-    attribute: "JavaScript",
-    tags: "JavaScript",
-    language: "Javascript",
+    attribute: ["javascript", "react", "html"],
+    langColor: "#e34c26",
+    language: "HTML",
     isPublic: "Public",
     isFav: 392,
     branches: 539,
@@ -15,30 +15,30 @@ const reposData = [
     id: 2,
     repoTitle: "testing again",
     about: "This is my test branch, again",
-    attribute: "JavaScript",
-    tags: "JavaScript",
-    language: "Javascript",
+    attribute: ["jamstack", "css"],
+    langColor: "#f1e05a",
+    language: "JavaScript",
     isPublic: "Public",
     isFav: 10,
     branches: 35,
-    lastUpdated: "Updated 25 weeks ago"
+    lastUpdated: "Updated on Aug 22, 2018"
   },
   {
     id: 3,
     repoTitle: "Clean my room",
-    about: "With the press of a button and a little magic, clicking it will clean   your room!",
-    attribute: "React",
-    tags: "JavaScript",
-    language: "JavaScript",
+    about: "With the press of a button and a little magic, clicking it will clean your room!",
+    attribute: ["python", "ruby"],
+    langColor: "#3572A5",
+    language: "Python",
     isPublic: "Public",
-    isFav: 0,
-    branches: 0,
+    isFav: 143,
+    branches: 59,
     lastUpdated: "Updated just now"
   }
 ];
 
 const reposOnDom = (array) => {
-  let domString = "";
+  let domString = '<div id="repos-find" class="mb-md-0 mx-md-3"><input class="repos-input repo" type="search" placeholder="Find a repository...">';
   for (const repo of array) {
     domString += `
       <div id="repos-page" class="repo">
@@ -55,15 +55,17 @@ const reposOnDom = (array) => {
           <p class="col-9 d-inline-block mb-3 text-white">${repo.about}</p>
             </div>
             <div class="fs-6 mt-2 color-custom">
-              <span class="repo-language-color"></span>
-              <span class="span-tag">${repo.tags}</span>
+              <svg height="10" width="10">
+                <circle cx="5" cy="5" r="5" fill="${repo.langColor}" />
+              </svg>
+              <span class="span-tag">${repo.language}</span>
               <button class="public-btn favoured"><img src="./assets/svg/star.svg"> ${repo.isFav}</button>
               <button class="public-btn favoured"><img src="./assets/svg/diagram-2.svg"> ${repo.branches}</button>
               <span class="span-tag">${repo.lastUpdated}</span>
             </div>
             </div>
             <div class="col-2 d-flex row justify-content-around end-full">
-              <button class="star-btn"><img src="./assets/svg/star.svg" /> Star</button>
+              <button id="fill-click" class="star-btn" data-toggle="dropdown"><img src="./assets/svg/star.svg" /> Star</button>
             </div>
           </li>
         </ul>
@@ -106,22 +108,40 @@ function repoFormOnDom() {
   renderToDom("#repos-form", domString);
 };
 
+
 reposOnDom(reposData);
 repoFormOnDom()
 
-const repoSubmit = document.querySelector("form");
 
+// variables
+const repoSubmit = document.querySelector("form");
+const fillClick = document.querySelector("#fill-click")
+const starEmpty = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="whitesmoke" class="bi bi-star-fill" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>';
+const starFill = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="whitesmoke" class="bi bi-star" viewBox="0 0 16 16"><path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg>';
+
+// allows to toggle star fill on if off
+function toggleStar() {
+  let currentFill = 1;
+
+  if (currentFill === 1) {
+    fillClick.innerHTML = `${starEmpty} Star`;
+    currentFill = 2;
+  } else {
+    fillClick.innerHTML = `${starFill} Star`;
+    currentFill = 1;
+  }
+}
+
+// function that takes form input and displays on repos tab
 const formInput = (e) => {
   e.preventDefault();
-
-  // const randomAttribute = reposData.attribute[Math.floor(Math.random() * reposData.attributes.length)];
 
   const repoPush = {
     id: reposData.length + 1,
     repoTitle: document.querySelector("#repo-name").value,
     about: document.querySelector("#repo-about").value,
-    attribute: randomAttribute,
-    tags: "JavaScript",
+    attribute: "HTML",
+    langColor: "#f1e05a",
     language: "JavaScript",
     isPublic: "Public",
     isFav: 0,
@@ -134,7 +154,6 @@ const formInput = (e) => {
   document.querySelector("form").reset();
 }
 
-// repoSubmit.addEventListener("click", (e) => {
-//   console.log("clicked");
-// })
+// event listeners
 repoSubmit.addEventListener("submit", formInput);
+fillClick.addEventListener("click", toggleStar)
