@@ -1,3 +1,5 @@
+// import * as reposData from "./repos-data.js";
+
 // UTILITY FUNCTION
 
 const renderToDom = (divId, htmlRender) => {
@@ -13,6 +15,8 @@ const profileArea = document.querySelector("#profile-area")
 
 
 //Functions
+
+// Function to render the footer on page
 function renderFooter() {
   domString = "";
 
@@ -35,6 +39,7 @@ function renderFooter() {
   renderToDom("#footer", domString);
 }
 
+// Function to render the profile area on page
 function renderProfile() {
   let domString = "";
   domString += `
@@ -79,11 +84,13 @@ function renderProfile() {
         <div class="highlights-left">
           <h5>Highlights</h5>
         </div>
-        <ul class="highlight-icons">
-          <li><img src="./assets/svg/asterisk.svg">&nbsp;&nbsp;Arctic Code Vault Contributor</li>
-          <li><img src="./assets/svg/star-fill.svg">&nbsp;&nbsp;Placeholder</li>
-          <li><img src="./assets/svg/star.svg">&nbsp;&nbsp;<button class="pro-btn">PRO</button></li>
-        </ul>
+        <div class="highlight-div">
+          <ul class="highlight-icons">
+            <li><img src="./assets/svg/asterisk.svg">&nbsp;&nbsp;Placeholder</li>
+            <li><img src="./assets/svg/star-fill.svg">&nbsp;&nbsp;Placeholder</li>
+            <li><img src="./assets/svg/star.svg">&nbsp;&nbsp;<button class="pro-btn">PRO</button></li>
+          </ul>
+        </div>
       </div>
       <div class="profile-separator">
         <hr class="profile-line">
@@ -122,6 +129,7 @@ function renderProfile() {
   renderToDom("#profile-area", domString);
 }
 
+// Event Listeners
 function eventListeners(){
   navContainerElement.addEventListener("click", (e) =>{
     if(e.target.id === "overviewBtn"){
@@ -141,7 +149,8 @@ function eventListeners(){
     
   })
 }
+
+// Rendering (later to be modularized)
 renderFooter();
 renderProfile();
-
 eventListeners();
