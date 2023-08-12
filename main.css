@@ -3,7 +3,7 @@ body {
 }
 
 #footer {
-  position: fixed;
+  position: relative;
   bottom: 0px;
   width: auto;
   text-align: center;
@@ -15,7 +15,7 @@ span {
 }
 
 #tiny-git {
-  max-width: 8%;
+  max-width: 2%;
   background: rgba( 252, 249, 249, 0 );
   /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 0px );
@@ -181,14 +181,50 @@ span {
 #createProjectBox{
   border: 2px double red;
   margin-top: 150px;
-  margin-left: 10%;
-  margin-right: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: auto
   }
+
+#createPackageBox{
+    border: 2px solid black;
+    margin-top: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    }
+    
   
 #createProjectDesc{
   margin-top: 50px;
 }
 
+#createPackageDesc {
+  margin-top: 30px;
+}
+
 .col-6{
   border: 2px solid blue
+}
+
+#package-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.single-card {
+  border: 2px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 8px;
 }
