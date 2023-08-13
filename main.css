@@ -1,6 +1,7 @@
 body {
   /* background-color: lightblue; */
   background-color: #11171e;
+  color: whitesmoke;
 }
 
 #footer {
@@ -43,8 +44,8 @@ span {
 }
 
 .profile-img {
-  border-radius: 50%;
   width: 200px;
+  border-radius: 70%;
   display: flex;
   align-items: center;
   object-fit: cover;
@@ -53,12 +54,17 @@ span {
 .profile-icon {
   max-width: 100%;
   margin: 20px 0 15px 0;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  box-shadow: whitesmoke;
 }
 
 .profile-btn {
   color: whitesmoke;
   gap: 6px;
   margin-bottom: 15px;
+  padding: 5px;
+  height: 40px;
 }
 
 .profile-info > ul > li {
@@ -72,7 +78,8 @@ span {
 .profile-btn-extras {
   border-radius: 10px;
   border: none;
-
+  background-color: #2e343c;
+  color: #838d98;
 }
 
 .profile-username {
@@ -108,30 +115,27 @@ span {
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  text-align: start;
+  /* text-align: start; */
   color: whitesmoke;
 }
 
 .highlight-div {
   width: 100%;
   display: flex;
-  align-items: flex-end;
-  background-color: blue;
+  align-items: flex-start;
 }
 
-.highlights-left,
-.orgs-left {
+.highlights-left {
   display: flex;
   justify-content: flex-start;
 }
 
 .pro-btn {
-  border: none;
+  border: 1px solid rgb(228, 0, 228);
   border-radius: 100px;
-}
-
-.orgs-left {
-  margin-left: 15px;
+  background: transparent;
+  color: rgb(228, 0, 228);
+  font-size: 12px;
 }
 
 .react-img,

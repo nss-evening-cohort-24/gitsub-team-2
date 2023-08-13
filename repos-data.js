@@ -125,14 +125,14 @@ const starFill = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 
 // allows to toggle star fill on if off
 function toggleStar() {
-  let currentFill = 1;
+  let currentFill = 2;
 
-  if (currentFill === 1) {
+  if (currentFill === 2) {
     fillClick.innerHTML = `${starEmpty} Star`;
-    currentFill = 2;
+    currentFill = 1;
   } else {
     fillClick.innerHTML = `${starFill} Star`;
-    currentFill = 1;
+    currentFill = 2;
   }
 }
 // const randomAtt = reposData.attribute[Math.floor(Math.random() * reposData[0].attribute.length)];
