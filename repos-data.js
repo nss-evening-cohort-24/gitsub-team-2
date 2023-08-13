@@ -3,7 +3,7 @@ const reposData = [
     id: 1,
     repoTitle: "testing",
     about: "This is my test branch",
-    attribute: ["javascript", "react", "html"],
+    attribute: ["java", "jamstack", "html", "python"],
     langColor: "#e34c26",
     language: "HTML",
     isPublic: "Public",
@@ -54,6 +54,10 @@ const reposOnDom = (array) => {
             <div>
           <p class="col-9 d-inline-block mb-3 text-white">${repo.about}</p>
             </div>
+            <div class="desc-btns">
+              <button class="attributes">${repo.attribute[0]}</button>
+              <button class="attributes">${repo.attribute[1]}</button>
+            </div>
             <div class="fs-6 mt-2 color-custom">
               <svg height="10" width="10">
                 <circle cx="5" cy="5" r="5" fill="${repo.langColor}" />
@@ -97,7 +101,7 @@ function repoFormOnDom() {
         <label for="repo-about" class="form-label fw-bold">Description
           <span class="opt-desc">(optional)</span>
         </label>
-        <textarea class="form-control form-width border-bottom w-25" id="repo-about"
+        <textarea class="form-control form-width border-bottom w-75" id="repo-about"
         rows="1"></textarea>
       </div>
         <button type="submit" class="btn btn-success border-bottom" id="createRepoBtn">Create repository</button>
@@ -131,16 +135,18 @@ function toggleStar() {
     currentFill = 1;
   }
 }
+// const randomAtt = reposData.attribute[Math.floor(Math.random() * reposData[0].attribute.length)];
 
 // function that takes form input and displays on repos tab
 const formInput = (e) => {
   e.preventDefault();
 
+
   const repoPush = {
     id: reposData.length + 1,
     repoTitle: document.querySelector("#repo-name").value,
     about: document.querySelector("#repo-about").value,
-    attribute: "HTML",
+    attribute: ["HTML", "javascript"],
     langColor: "#f1e05a",
     language: "JavaScript",
     isPublic: "Public",
