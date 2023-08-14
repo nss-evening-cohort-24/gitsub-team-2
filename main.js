@@ -59,8 +59,47 @@ const pinnedProjects =[
 
 //Variables
 const footer = document.querySelector("#footer");
-const navContainerElement = document.querySelector("#navContainer");
-const profileArea = document.querySelector("#profile-area");
+const navContainerElement = document.querySelector("#navContainer")
+const profileArea = document.querySelector("#profile-area")
+//const overviewBtnelement = document.querySelector("overviewBtn")
+
+//these select the DOM elements with the ID "proj" and "projectSearchInput" and stores them in a variable - LM
+const projectsArea = document.querySelector("#proj");
+const projectSearchInput = document.querySelector("#projectSearchInput");
+const projectForm = document.querySelector("#projectForm");
+
+//this defines a function to render the list of projects on the webpage
+function renderProjects(projects) {
+  let domString = '<ul class="list-group"><li class="list-group-item">Projects<button class="sortPic"><img src="./assets/svg/sort-alpha-down.svg"></button></li>';
+  
+  //this goes through each project and builds the HTML representation
+  projects.forEach(project => {
+    domString += `
+    <li class="list-group-item">
+    <div class="title-column">${project.title}</div>
+    <div class="description-column">${project.description}</div>
+    <button class="3dots"><img src="./assets/svg/three-dots.svg"></button>
+    </li>`;
+  });
+
+  domString += "</ul>";
+
+  //this updates the HTML of the projects area with the generated HTML
+  // projectsArea.innerHTML = domString;
+  renderToDom("#proj", domString);
+}
+
+//this defines a function to filter and display projects based on a search term
+function searchProjects(searchTerm) {
+
+  //this filters projects whose titles contain the search term and is case sensitive
+  const filteredProjects = projectData.filter(project => {
+    return project.title.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  //this renders the filtered projects
+  renderProjects(filteredProjects);
+} 
 
 // Function to render the footer on page
 function renderFooter() {
@@ -207,7 +246,20 @@ function eventListeners(){
       renderPinned()
     }
     
-  })
+  });
+
+    // //this renders all projects initially
+    // renderProjects(projectData);
+
+    //this adds an event listener to the search input field
+    projectSearchInput.addEventListener("input", event => {
+  
+      //this gets the current input value
+      const searchTerm = event.target.value;
+  
+      //this calls the searchProjects function to filter and display projects
+      searchProjects(searchTerm);
+    });
 }
 
 function renderPinned(){
@@ -227,4 +279,5 @@ function renderPinned(){
 // Rendering (later to be modularized)
 renderProfile();
 renderPinned();
+renderProjects(projectData);
 eventListeners();

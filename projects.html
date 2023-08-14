@@ -35,32 +35,31 @@
               </div>
             </div>
           </nav>
-          
+
           <div id="projectContainer">
           <div id="projectSearchBar">
             <input type="text" id="projectSearchInput" placeholder="Search all projects">
           </div>
-          <div id="projectHeader">Projects</div>
           <div class="projects" id="proj"></div>
         </div>
 
-          <div id="createProjectBox">
+        <form id="projectForm">
+          <div id="createProjectBox-ProjectsPage">
             <h3>Create a New Project</h3>
             <h6 id="createProjectDesc">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
             <div class="mb-3">
             <label for="exampleFormControlTextarea1" class  ="form-label">Project Board Name</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="projectName" rows="3"></textarea>
             </div>
             <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="projectDescription" rows="3"></textarea>
             </div>
-            <button type="button" class="btn btn-success" id="createProjectBtn">Create Project</button>
+            <button type="submit" class="btn btn-success" id="projectCreateProjectBtn">Create Project</button>
             </div>
+        </form>
         </div>
     </div>
-
-
 
     <footer id="footer"></footer>
     <script

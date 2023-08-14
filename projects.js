@@ -14,59 +14,39 @@ const projectData = [
     title: "Sample My Goals",
     description: "Goals for the NSS Bootcamp",
   },
+
+  {
+    title: "Harry Potter Sorting Hat",
+    description: "Sorting hat for hogwarts",
+  },
+
+  {
+    title: "Calculator",
+    description: "Fully functional calculator",
+  },
 ]; 
 
-//these select the DOM elements with the ID "proj" and "projectSearchInput" and stores them in a variable
-const projectsArea = document.querySelector("#proj");
-const projectSearchInput = document.querySelector("#projectSearchInput");
+  projectForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-//this defines a function to render the list of projects on the webpage
-function renderProjects(projects) {
-  let domString = '<ul class="list-group">';
+    const titleInput = document.querySelector("#projectName");
+    const descriptionInput = document.querySelector("#projectDescription");
 
-  //this goes through each project and builds the HTML representation
-  projects.forEach(project => {
-    domString += `
-    <li class="list-group-item">
-    <div class="title-column">${project.title}</div>
-    <div class="description-column">${project.description}</div>
-    </li>`;
+    const title = titleInput.value.trim();
+    const description = descriptionInput.value.trim();
+
+    if (title === "" || description === "") {
+      alert("Both title and description are required.");
+      return;
+    }
+
+    const newProject = {
+      title: document.querySelector("#projectName").value,
+      description: document.querySelector("#projectDescription").value,
+    }
+    
+    projectData.push(newProject);
+    renderProjects(projectData);
+    projectForm.reset();
   });
-
-  domString += "</ul>";
-
-  //this updates the HTML of the projects area with the generated HTML
-  projectsArea.innerHTML = domString;
-}
-
-//this defines a function to filter and display projects based on a search term
-function searchProjects(searchTerm) {
-
-  //this filters projects whose titles contain the search term and is case sensitive
-  const filteredProjects = projectData.filter(project => {
-    return project.title.toLowerCase().includes(searchTerm.toLowerCase());
-  });
-
-  //this renders the filtered projects
-  renderProjects(filteredProjects);
-}
-
-//this defines a function to initialize the webpage functionality
-function initialize() {
-  
-  //this renders all projects initially
-  renderProjects(projectData);
-
-  //this adds an event listener to the search input field
-  projectSearchInput.addEventListener("input", event => {
-
-    //this gets the current input value
-    const searchTerm = event.target.value;
-
-    //this calls the searchProjects function to filter and display projects
-    searchProjects(searchTerm);
-  });
-}
-
-//this calls the initialize function to start the webpage functionality
-initialize();
+renderProjects(projectData);
