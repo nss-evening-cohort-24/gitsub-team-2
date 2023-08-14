@@ -29,17 +29,6 @@ const projectData = [
   projectForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const titleInput = document.querySelector("#projectName");
-    const descriptionInput = document.querySelector("#projectDescription");
-
-    const title = titleInput.value.trim();
-    const description = descriptionInput.value.trim();
-
-    if (title === "" || description === "") {
-      alert("Both title and description are required.");
-      return;
-    }
-
     const newProject = {
       title: document.querySelector("#projectName").value,
       description: document.querySelector("#projectDescription").value,
@@ -49,4 +38,8 @@ const projectData = [
     renderProjects(projectData);
     projectForm.reset();
   });
+
 renderProjects(projectData);
+
+renderFooter();
+renderProfile();

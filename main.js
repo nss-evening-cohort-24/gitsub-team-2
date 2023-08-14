@@ -5,7 +5,7 @@ const renderToDom = (divId, htmlRender) => {
   selectedDiv.innerHTML = htmlRender;
 };
 
-let form = document.querySelector("form")
+const pinnedForm = document.querySelector("#pinned-form")
 const pinnedProjects =[
   {
     id: 1,
@@ -66,7 +66,7 @@ const profileArea = document.querySelector("#profile-area")
 //these select the DOM elements with the ID "proj" and "projectSearchInput" and stores them in a variable - LM
 const projectsArea = document.querySelector("#proj");
 const projectSearchInput = document.querySelector("#projectSearchInput");
-const projectForm = document.querySelector("#projectForm");
+const projectForm = document.querySelector("#project-form");
 
 //this defines a function to render the list of projects on the webpage
 function renderProjects(projects) {
@@ -197,7 +197,7 @@ function renderProfile() {
       </div>
       <div class="profile-sponsors">
         <h5>Sponsors</h5>
-        <div class="people-pics"> 
+        <div class="people-pics my-3"> 
           <img class="people" src="https://cdn-icons-png.flaticon.com/512/552/552721.png">
           <img class="people" src="https://cdn-icons-png.flaticon.com/512/552/552721.png">
           <img class="people" src="https://cdn-icons-png.flaticon.com/512/552/552721.png">
@@ -216,40 +216,26 @@ function renderProfile() {
   renderToDom("#profile-area", domString);
 }
 
+const pinnedFormInput = document.getElementById("pinned-form");
+pinnedFormInput.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const pinnedPush = {
+    id: pinnedProjects.length + 1,
+    title: document.querySelector("#pinnedBoardNameInput").value,
+    desc: document.querySelector("#pinnedDescInput").value,
+    type: "Javascript",
+    favorites: 49,
+    downloads: 17
+  };
+
+  pinnedProjects.push(pinnedPush);
+  renderPinned(pinnedProjects);
+  pinnedForm.reset();
+});
 
 // Event Listeners
-function eventListeners(){
-  navContainerElement.addEventListener("click", (e) =>{
-    if(e.target.id === "overviewBtn"){
-      console.log("Overview Button Clicked!")
-    } else if(e.target.id === "repositoriesBtn"){
-      console.log("Repositories Button Clicked!")
-    }
-    else if(e.target.id === "projectsBtn"){
-      console.log("Projects Button Clicked!")
-    }
-    else if(e.target.id === "packagesBtn"){
-      console.log("Packages Button Clicked!")
-    }
-    else if(e.target.id === "createProjectBtn"){
-      console.log("Create Project Button Clicked!")
-      let obj = {}
-      obj.title = document.querySelector("#projectBoardNameInput").value
-      obj.desc = document.querySelector("#projectDescInput").value
-      obj.type = "Javascript"
-      obj.favorites = 49
-      obj.downloads = 17
-      pinnedProjects.push(obj)
-      form.reset()
-
-
-      renderPinned()
-    }
-    
-  });
-
-    // //this renders all projects initially
-    // renderProjects(projectData);
+function eventListeners() {
 
     //this adds an event listener to the search input field
     projectSearchInput.addEventListener("input", event => {
@@ -260,6 +246,7 @@ function eventListeners(){
       //this calls the searchProjects function to filter and display projects
       searchProjects(searchTerm);
     });
+
 }
 
 function renderPinned(){
@@ -277,7 +264,12 @@ function renderPinned(){
 }
 
 // Rendering (later to be modularized)
-renderProfile();
-renderPinned();
-renderProjects(projectData);
-eventListeners();
+const startApp = () => {
+  renderProfile();
+  renderPinned();
+  renderFooter();
+  renderProjects(projectData);
+  eventListeners();
+};
+
+startApp();
