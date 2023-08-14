@@ -1,4 +1,4 @@
-const form = document.querySelector('form')
+const pkgForm = document.querySelector('#pkg-form')
 const packages = [
   {
     id: 1,
@@ -79,7 +79,7 @@ function formOnDom() {
 
 
 function packageEventListeners() {
-form.addEventListener('submit', (e) => {
+pkgForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
   const newPackageObj = {
@@ -90,7 +90,7 @@ form.addEventListener('submit', (e) => {
 
   packages.push(newPackageObj)
   packagesOnDom(packages)
-  form.reset()
+  pkgForm.reset()
 })
 }
 
