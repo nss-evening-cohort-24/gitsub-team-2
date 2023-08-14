@@ -1,4 +1,4 @@
-const form = document.querySelector('form')
+const pkgForm = document.querySelector('#pkg-form')
 const packages = [
   {
     id: 1,
