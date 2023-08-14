@@ -158,7 +158,7 @@ function renderProfile() {
       </div>
       <div class="profile-sponsors">
         <h5>Sponsors</h5>
-        <div class="people-pics"> 
+        <div class="people-pics my-3"> 
           <img class="people" src="https://cdn-icons-png.flaticon.com/512/552/552721.png">
           <img class="people" src="https://cdn-icons-png.flaticon.com/512/552/552721.png">
           <img class="people" src="https://cdn-icons-png.flaticon.com/512/552/552721.png">
@@ -225,6 +225,12 @@ function renderPinned(){
 }
 
 // Rendering (later to be modularized)
-renderProfile();
-renderPinned();
-eventListeners();
+
+const startApp = () => {
+  renderFooter();
+  renderProfile();
+  renderPinned();
+  eventListeners();
+}
+
+startApp();
