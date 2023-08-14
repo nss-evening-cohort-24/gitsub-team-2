@@ -87,7 +87,8 @@ function renderProjects(projects) {
   domString += "</ul>";
 
   //this updates the HTML of the projects area with the generated HTML
-  projectsArea.innerHTML = domString;
+  // projectsArea.innerHTML = domString;
+  renderToDom("#proj", domString);
 }
 
 //this defines a function to filter and display projects based on a search term
@@ -221,7 +222,7 @@ function renderProfile() {
 // Event Listeners
 function eventListeners(){
   navContainerElement.addEventListener("click", (e) =>{
-    e.preventDefault()
+    // e.preventDefault()
     if(e.target.id === "overviewBtn"){
       console.log("Overview Button Clicked!")
     } else if(e.target.id === "repositoriesBtn"){
@@ -282,5 +283,5 @@ function renderPinned(){
 renderFooter();
 renderProfile();
 renderPinned();
-eventListeners();
 renderProjects(projectData);
+eventListeners();

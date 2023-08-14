@@ -49,3 +49,4 @@ const projectData = [
     renderProjects(projectData);
     projectForm.reset();
   });
+renderProjects(projectData);
