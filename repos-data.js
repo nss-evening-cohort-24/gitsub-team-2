@@ -82,7 +82,7 @@ const reposOnDom = (array) => {
 function repoFormOnDom() {
   let domString = "";
   domString += `
-  <form>
+  <form id="repo-form">
     <div id="createRepoBox">
       <div class="spacing mb-md-0 mx-md-3">
       <div class="border-bottom mb-2">
@@ -112,7 +112,7 @@ function repoFormOnDom() {
   renderToDom("#repos-form", domString);
 };
 
-
+// calling so data displays
 reposOnDom(reposData);
 repoFormOnDom()
 
@@ -157,7 +157,7 @@ const formInput = (e) => {
 
   reposData.push(repoPush);
   reposOnDom(reposData);
-  document.querySelector("form").reset();
+  document.querySelector("#repo-form").reset();
 }
 
 // event listeners

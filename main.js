@@ -181,7 +181,6 @@ function renderProfile() {
 // Event Listeners
 function eventListeners(){
   navContainerElement.addEventListener("click", (e) =>{
-    e.preventDefault()
     if(e.target.id === "overviewBtn"){
       console.log("Overview Button Clicked!")
     } else if(e.target.id === "repositoriesBtn"){
