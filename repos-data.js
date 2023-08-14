@@ -163,3 +163,10 @@ const formInput = (e) => {
 // event listeners
 repoSubmit.addEventListener("submit", formInput);
 fillClick.addEventListener("click", toggleStar)
+
+// const startApp = () => {
+  
+// }
+
+renderFooter();
+renderProfile();

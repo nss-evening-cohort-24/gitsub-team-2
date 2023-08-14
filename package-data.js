@@ -101,3 +101,6 @@ function packageStart() {
 }
               
 packageStart()
+
+renderFooter();
+renderProfile();

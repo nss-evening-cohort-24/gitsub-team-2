@@ -5,7 +5,7 @@ const renderToDom = (divId, htmlRender) => {
   selectedDiv.innerHTML = htmlRender;
 };
 
-let form = document.querySelector("form")
+const pinnedForm = document.querySelector("#pinned-form")
 const pinnedProjects =[
   {
     id: 1,
@@ -59,8 +59,47 @@ const pinnedProjects =[
 
 //Variables
 const footer = document.querySelector("#footer");
-const navContainerElement = document.querySelector("#navContainer");
-const profileArea = document.querySelector("#profile-area");
+const navContainerElement = document.querySelector("#navContainer")
+const profileArea = document.querySelector("#profile-area")
+//const overviewBtnelement = document.querySelector("overviewBtn")
+
+//these select the DOM elements with the ID "proj" and "projectSearchInput" and stores them in a variable - LM
+const projectsArea = document.querySelector("#proj");
+const projectSearchInput = document.querySelector("#projectSearchInput");
+const projectForm = document.querySelector("#project-form");
+
+//this defines a function to render the list of projects on the webpage
+function renderProjects(projects) {
+  let domString = '<ul class="list-group"><li class="list-group-item">Projects<button class="sortPic"><img src="./assets/svg/sort-alpha-down.svg"></button></li>';
+  
+  //this goes through each project and builds the HTML representation
+  projects.forEach(project => {
+    domString += `
+    <li class="list-group-item">
+    <div class="title-column">${project.title}</div>
+    <div class="description-column">${project.description}</div>
+    <button class="3dots"><img src="./assets/svg/three-dots.svg"></button>
+    </li>`;
+  });
+
+  domString += "</ul>";
+
+  //this updates the HTML of the projects area with the generated HTML
+  // projectsArea.innerHTML = domString;
+  renderToDom("#proj", domString);
+}
+
+//this defines a function to filter and display projects based on a search term
+function searchProjects(searchTerm) {
+
+  //this filters projects whose titles contain the search term and is case sensitive
+  const filteredProjects = projectData.filter(project => {
+    return project.title.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  //this renders the filtered projects
+  renderProjects(filteredProjects);
+} 
 
 // Function to render the footer on page
 function renderFooter() {
@@ -177,37 +216,37 @@ function renderProfile() {
   renderToDom("#profile-area", domString);
 }
 
+const pinnedFormInput = document.getElementById("pinned-form");
+pinnedFormInput.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const pinnedPush = {
+    id: pinnedProjects.length + 1,
+    title: document.querySelector("#pinnedBoardNameInput").value,
+    desc: document.querySelector("#pinnedDescInput").value,
+    type: "Javascript",
+    favorites: 49,
+    downloads: 17
+  };
+
+  pinnedProjects.push(pinnedPush);
+  renderPinned(pinnedProjects);
+  pinnedForm.reset();
+});
 
 // Event Listeners
-function eventListeners(){
-  navContainerElement.addEventListener("click", (e) =>{
-    if(e.target.id === "overviewBtn"){
-      console.log("Overview Button Clicked!")
-    } else if(e.target.id === "repositoriesBtn"){
-      console.log("Repositories Button Clicked!")
-    }
-    else if(e.target.id === "projectsBtn"){
-      console.log("Projects Button Clicked!")
-    }
-    else if(e.target.id === "packagesBtn"){
-      console.log("Packages Button Clicked!")
-    }
-    else if(e.target.id === "createProjectBtn"){
-      console.log("Create Project Button Clicked!")
-      let obj = {}
-      obj.title = document.querySelector("#projectBoardNameInput").value
-      obj.desc = document.querySelector("#projectDescInput").value
-      obj.type = "Javascript"
-      obj.favorites = 49
-      obj.downloads = 17
-      pinnedProjects.push(obj)
-      form.reset()
+function eventListeners() {
 
+    //this adds an event listener to the search input field
+    projectSearchInput.addEventListener("input", event => {
+  
+      //this gets the current input value
+      const searchTerm = event.target.value;
+  
+      //this calls the searchProjects function to filter and display projects
+      searchProjects(searchTerm);
+    });
 
-      renderPinned()
-    }
-    
-  })
 }
 
 function renderPinned(){
@@ -225,12 +264,12 @@ function renderPinned(){
 }
 
 // Rendering (later to be modularized)
-
 const startApp = () => {
-  renderFooter();
   renderProfile();
   renderPinned();
+  renderFooter();
+  renderProjects(projectData);
   eventListeners();
-}
+};
 
 startApp();
