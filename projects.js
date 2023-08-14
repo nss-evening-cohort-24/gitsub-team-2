@@ -14,6 +14,16 @@ const projectData = [
     title: "Sample My Goals",
     description: "Goals for the NSS Bootcamp",
   },
+
+  {
+    title: "Harry Potter Sorting Hat",
+    description: "Sorting hat for hogwarts",
+  },
+
+  {
+    title: "Calculator",
+    description: "Fully functional calculator",
+  },
 ]; 
 
   projectForm.addEventListener("submit", (e) => {

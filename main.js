@@ -20,14 +20,15 @@ const projectForm = document.querySelector("#projectForm");
 
 //this defines a function to render the list of projects on the webpage
 function renderProjects(projects) {
-  let domString = '<ul class="list-group">';
-
+  let domString = '<ul class="list-group"><li class="list-group-item">Projects<button class="sortPic"><img src="./assets/svg/sort-alpha-down.svg"></button></li>';
+  
   //this goes through each project and builds the HTML representation
   projects.forEach(project => {
     domString += `
     <li class="list-group-item">
     <div class="title-column">${project.title}</div>
     <div class="description-column">${project.description}</div>
+    <button class="3dots"><img src="./assets/svg/three-dots.svg"></button>
     </li>`;
   });
 
@@ -184,8 +185,8 @@ function eventListeners(){
     
   });
 
-    //this renders all projects initially
-    renderProjects(projectData);
+    // //this renders all projects initially
+    // renderProjects(projectData);
 
     //this adds an event listener to the search input field
     projectSearchInput.addEventListener("input", event => {
