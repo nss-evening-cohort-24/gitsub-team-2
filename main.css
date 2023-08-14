@@ -168,10 +168,10 @@ span {
 }
 
 #pinnedHeader{
-  border: 3px solid green;
   padding-left: 10%;
   padding-right: 10%;
   margin-top: 25px;
+  color: whitesmoke;
 }
 
 #pinnedBody{

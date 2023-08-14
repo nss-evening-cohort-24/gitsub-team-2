@@ -7,6 +7,58 @@ const renderToDom = (divId, htmlRender) => {
   selectedDiv.innerHTML = htmlRender;
 };
 
+let form = document.querySelector("form")
+const pinnedProjects =[
+  {
+    id: 1,
+    title: "gatsby-workshop",
+    desc: "This workshop covers the fundamentals of developing fast, accessible sites with Gatsby, a React framework, and dive deep into the building blocks you'll need to build your own custom Gatsby sites.",
+    type: "Javascript",
+    favorites: 38,
+    downloads: 6
+  },
+  { id: 2,
+    title: "getting-started-with-open-source",
+    desc: "This is a presentation on Getting Started with Open Source",
+    type: "Javascript",
+    favorites: 6,
+    downloads: ""
+  },
+  {
+    id: 3,
+    title: "Rebuild-Black-Business/RBB-Website",
+    desc: "Website to connect black-owned business with consumers and resources",
+    type: "Javascript",
+    favorites: 99,
+    downloads: 75
+  },
+  {
+    id: 4,
+    title: "React-Ladies",
+    desc: "We're a group of women and non-binary ReactJS enthusiasts in New York City (and beyond).",
+    type: "Javascript",
+    favorites: 99,
+    downloads: 26
+  },
+  {
+    id: 5,
+    title: "httriri",
+    desc: "HTTRiRi - HTTP Status Codes as Portrayed by Rihanna GIFs",
+    type: "Typescript",
+    favorites: 37,
+    downloads: 22
+  },
+  {
+    id: 5,
+    title: "affirmation_generator",
+    desc: "A random affirmation generator written with ReactJS :-)",
+    type: "Javascript",
+    favorites: 52,
+    downloads: 32
+  },
+
+]
+
 //Variables
 const footer = document.querySelector("#footer");
 const navContainerElement = document.querySelector("#navContainer")
@@ -129,9 +181,11 @@ function renderProfile() {
   renderToDom("#profile-area", domString);
 }
 
+
 // Event Listeners
 function eventListeners(){
   navContainerElement.addEventListener("click", (e) =>{
+    e.preventDefault()
     if(e.target.id === "overviewBtn"){
       console.log("Overview Button Clicked!")
     } else if(e.target.id === "repositoriesBtn"){
@@ -145,12 +199,38 @@ function eventListeners(){
     }
     else if(e.target.id === "createProjectBtn"){
       console.log("Create Project Button Clicked!")
+      let obj = {}
+      obj.title = document.querySelector("#projectBoardNameInput").value
+      obj.desc = document.querySelector("#projectDescInput").value
+      obj.type = "Javascript"
+      obj.favorites = 49
+      obj.downloads = 17
+      pinnedProjects.push(obj)
+      form.reset()
+
+
+      renderPinned()
     }
     
   })
 }
 
+function renderPinned(){
+  domString = ""
+  for(element of pinnedProjects){
+    domString += `
+    <div class="col-6 text-white">
+      <div class="p-3" id="pinnedTitle${element.id}">${element.title}</div>
+      <div class="p-3" id="pinnedDesc${element.id}">${element.desc}</div>
+      <div class="p-3" id="pinnedFooter${element.id}">${element.type}    ${element.favorites} favorites    ${element.downloads} downloads</div>
+    </div>
+    `
+    }
+    renderToDom("#pinnedCardsArea", domString)
+}
+
 // Rendering (later to be modularized)
 renderFooter();
 renderProfile();
+renderPinned();
 eventListeners();
