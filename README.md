@@ -44,10 +44,10 @@
   - Packages Form: #
 
 # Contributors
-  -https://github.com/b33blebroxx
-  -https://github.com/Lucas-Martin2023 
-  -https://github.com/alexsendre 
-  -https://github.com/ctucker0113 
+  - https://github.com/b33blebroxx
+  - https://github.com/Lucas-Martin2023 
+  - https://github.com/alexsendre 
+  - https://github.com/ctucker0113 
 
 # Video Walkthroughs
   - Overview Page: #
