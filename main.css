@@ -1,0 +1,429 @@
+body {
+  /* background-color: lightblue; */
+  background-color: #11171e;
+  color: whitesmoke;
+}
+
+#footer {
+  position: relative;
+  bottom: 0px;
+  width: auto;
+  text-align: center;
+}
+
+span {
+  padding: 2px;
+  font-size: 8px;
+}
+
+#tiny-git {
+  max-width: 2%;
+  background: rgba( 252, 249, 249, 0 );
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px ); */
+  border-radius: 10px;
+}
+
+#navContainer{
+  width: 100%;
+  border: 3px solid black
+}
+
+#profile-area {
+  top: 0;
+  position: relative;
+  width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #11171e;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.profile-img {
+  width: 200px;
+  border-radius: 70%;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+}
+
+.profile-icon {
+  max-width: 100%;
+  margin: 20px 0 15px 0;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  box-shadow: whitesmoke;
+}
+
+.profile-btn {
+  color: whitesmoke;
+  gap: 6px;
+  margin-bottom: 15px;
+  padding: 5px;
+  height: 40px;
+}
+
+.profile-info > ul > li {
+  list-style: none;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.profile-btn-follow,
+.profile-btn-sponsor,
+.profile-btn-extras {
+  border-radius: 10px;
+  border: none;
+  background-color: #2e343c;
+  color: #838d98;
+}
+
+.profile-username {
+  font-size: 14px;
+}
+
+.profile-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.followers,
+.following {
+  text-decoration: none;
+  color: rgb(174, 174, 174);
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-line {
+  border: 1px solid #a0a0a0;
+  width: 200px;
+  margin-top: 0;
+}
+
+.highlight-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  /* text-align: start; */
+  color: whitesmoke;
+}
+
+.highlight-div {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.highlights-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pro-btn {
+  border: 1px solid rgb(228, 0, 228);
+  border-radius: 100px;
+  background: transparent;
+  color: rgb(228, 0, 228);
+  font-size: 12px;
+}
+
+.react-img,
+.node-img,
+.vsc-img {
+  width:17%;
+  height:17%;
+  object-fit:cover;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.people-pics {
+  display: flex;
+  flex-direction: row;
+  object-fit: cover;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.people {
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.sponsor-btn {
+  border-radius: 25%;
+}
+
+#pageBody{
+  display: flex;
+}
+
+#pinnedHeader{
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 25px;
+  color: whitesmoke;
+}
+
+#pinnedBody{
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#column1, #column2{
+  width: 50%;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6{
+  border: 3px dotted purple;
+}
+
+.repo {
+  background-color: #11171e;
+}
+
+.title-color {
+  color: #5297ff;
+}
+
+.label {
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 24px;
+  padding: 0 3px;
+  white-space: nowrap;
+}
+
+.wb-break-all {
+  word-break: break-all !important;
+}
+
+.end-full {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.star-btn {
+  height: 20%;
+  width: 40%;
+  border: none;
+  border-radius: 10px;
+  background-color: #2e343c;
+  color: #838d98;
+  font-weight: bold;
+  height: 40px;
+}
+
+.star-btn:hover {
+  border: 1px solid whitesmoke;
+  color:#838d98;
+  background-color: #2e343c;
+}
+
+#repos-page {
+  background-color: #11171e;
+  margin-top: 20px;
+  margin-right: 200px;
+  width: 100%;
+}
+
+.repos-input {
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 30%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #11171e;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#createRepoBox{
+  background-color: #11171e;
+  /* border: 2px double black; */
+  margin-top: 60px;
+  margin-left: 20px;
+  /* margin-right: 200px; */
+  width: 60%;
+  color: whitesmoke;
+}
+
+#createProjectBox{
+  margin-top: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: auto
+  }
+
+#createPackageBox{
+    border: 2px solid black;
+    margin-top: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    }
+  
+#createProjectDesc{
+  margin-top: 10px;
+}
+
+.col-6{
+  border: 2px solid blue;
+}
+
+.public-btn {
+  border: none;
+  border-radius: 20px;
+  width: auto;
+  background-color: #21262d;
+  color: #919ba6;
+  font-weight: bold;
+}
+
+.color-custom {
+  color: #919ba6;
+  font-weight: bold;
+}
+
+.opt-desc {
+  font-size: 12px;
+  font-weight: normal;
+  color: #838d98;
+}
+
+.span-tag {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.spacing {
+  padding: 10px;
+}
+
+.name-inspo {
+  font-weight: bold;
+  color: greenyellow;
+  font-size: 16px;
+}
+
+.desc-btns {
+  gap: 25px;
+}
+
+.attributes {
+  text-align: center;
+  height: 30px;
+  width: auto;
+  border: none;
+  border-radius: 30px;
+  font-size: 12px;
+  background-color: #0f2649;
+  padding: 0 10px;
+  color: #5297ff;
+  font-weight: bold;
+}
+
+.favoured {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  height: auto;
+}
+
+.required {
+  font-size: 16px;
+  color: red;
+}
+
+#package-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.single-card {
+  border: 2px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.list-group-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #11171e;
+  color: white;
+}
+
+#projectSearchBar{
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#projectSearchInput{
+  background-color: #11171e;
+  color: white;
+}
+
+#projectContainer{
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+  }
+
+.title-column{
+  width: 200px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.description-column{
+  flex-grow: 1;
+}
+
+#createPackageDesc {
+  color: grey;
+}
+
+#createProjectBox-ProjectsPage{
+  border: 2px solid black;
+  margin-top: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: auto;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  }
+
+.sortPic{
+  display: flex;
+  align-content: end;
+}
